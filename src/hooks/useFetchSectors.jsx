@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Options from "./Options";
 
 const useFetchSectors = () => {
     const [options, setSectors] = useState([]);
@@ -9,8 +10,11 @@ const useFetchSectors = () => {
         const fetchSectors = async () => {
             try {
                 const { data } = await axios.get(
-                    "http://localhost:3001/api/sectors"
+                    // "https://interview-server.adaptable.app/api/sectors"
+                    "https://interview-server.adaptable.app/api/sectors"
                 );
+                // const { data } = Options;
+
                 setSectors(data);
                 setLoading(false);
             } catch (error) {

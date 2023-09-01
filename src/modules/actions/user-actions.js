@@ -7,7 +7,7 @@ const useDeleteUser = (setUserId) => {
 
     const deleteUser = async () => {
         try {
-            await axios.delete("http://localhost:3001/api", {
+            await axios.delete("https://interview-server.adaptable.app/api", {
                 data: {
                     _id: localStorage.getItem("userId"),
                 },

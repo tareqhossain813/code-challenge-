@@ -31,7 +31,7 @@ const useFormSubmit = () => {
 
         try {
             const { data } = await axios.post(
-                "http://localhost:3001/api",
+                "https://interview-server.adaptable.app/api",
                 {...body, sectors: selectedValues }
             );
             toast.success("Successfully submitted");

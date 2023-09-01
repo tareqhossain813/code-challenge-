@@ -10,7 +10,7 @@ const useUserData = () => {
     const fetchUserData = async (_id) => {
         setLoadingData(true);
         try {
-            const { data } = await axios.get(`http://localhost:3001/api`, {
+            const { data } = await axios.get(`https://interview-server.adaptable.app/api`, {
                 params: {
                     _id,
                 },
@@ -32,7 +32,7 @@ const useUserData = () => {
         if (sectors?.length < 1) return toast.error("Please select at least one sector.")
         setLoadingData(true);
         try {
-            const { data } = await axios.patch("http://localhost:3001/api", {
+            const { data } = await axios.patch("https://interview-server.adaptable.app/api", {
                 _id: userId,
                 name,
                 sectors,
